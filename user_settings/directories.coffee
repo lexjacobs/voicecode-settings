@@ -1,6 +1,6 @@
 # ~/voicecode/settings/os.coffee
 Settings.os =
   directories:
-    development: "~/development"
+    development: "~/develop"
     dropbox: "~/Dropbox"
     voicecode: "~/voicecode"

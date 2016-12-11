@@ -81,9 +81,15 @@ Package.commands
     enabled: true
     description: "clear terminal, or console"
     continuous: false
-    scope: 'command-line'
     action: ->
-      @key "K", "command"
+
+      if Scope.active('command-line')
+        @key "K", "command"
+      if Scope.active('chrome')
+        @string('clear()')
+        @key "return"
+      else
+        @
 
   "double-ampersand-padded":
     spoken: "dandy"
@@ -127,6 +133,35 @@ Package.commands
     autoSpacing: 'never never'
     action: ->
       @string " | "
+
+  'park-mouse':
+    spoken: 'drag park'
+    enabled: true
+    description: "put mouse into the top left corner, quit camera, turn off microphone"
+    action: ->
+
+      # turn off camera
+      @do('user:user:camera-quit')
+      # put mouse in corner
+      @positionMouse(100, 100, 1) # index?
+      @positionMouse(0, 0, 1) # index?
+      @delay(50)
+      @positionMouse(100, 100, 1) # index?
+      @positionMouse(0, 0, 1) # index?
+      # in case monitor 2 is hooked up
+      @positionMouse(100, 100, 2) # index?
+      @positionMouse(0, 0, 2) # index?
+      # turn off microphone
+      @do('dragon_darwin:microphone-sleep')
+
+      @delay(200)
+      # move mouse again
+      @positionMouse(100, 100, 1) # index?
+      @positionMouse(0, 0, 1) # index?
+      # in case monitor 2 is hooked up
+      @positionMouse(100, 100, 2) # index?
+      @positionMouse(0, 0, 2) # index?
+
 
   'add-list-entry':
     spoken: 'listy'
@@ -325,6 +360,54 @@ Package.commands
         @do "clipboard:paste"
         @delay(300)
         @key('return')
+
+  'pick-first-word':
+    spoken: 'pickle'
+    grammarType: "textCapture"
+    enabled: true
+    autoSpacing: "soft never"
+    action: (input) ->
+      if input
+        @string input[0]
+
+  'pick-last-word':
+    spoken: 'tickle'
+    grammarType: "textCapture"
+    enabled: true
+    autoSpacing: "soft never"
+    action: (input) ->
+      if input
+        @string input[input.length-1]
+
+  "voicecode-quit":
+    spoken: 'quash voicecode'
+    enabled: true
+    description: "quit VoiceCode"
+    continuous: false
+    action: ->
+      @applescript('tell application "VoiceCode" to quit')
+
+  "activate-shorty":
+    spoken: 'shorty'
+    enabled: true
+    grammarType: "singleSearch"
+    description: "opens shortcat window. Say 'shorty' once to bring up ui. say 'shorty arch brov' or whatever letter combo you want to click on to bring focus to that element. Say 'shock' to execute the click on that element."
+    action: (input) ->
+
+        input = input.value
+        # if the command is followed by a phrase
+        if input and input.length and (@currentApplication().name is "Shortcat")
+
+            input.split("").forEach((letter) =>
+                @delay(50)
+                @key letter, "control"
+            )
+
+        # if the command is not followed by a phrase
+        else
+            @key "s", "command option control"
+            @delay(200)
+            @key "."
 
   'space-before-last-utterance':
     spoken: 'tragically'
