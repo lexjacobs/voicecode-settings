@@ -162,6 +162,19 @@ Package.commands
       @positionMouse(100, 100, 2) # index?
       @positionMouse(0, 0, 2) # index?
 
+  'dictate-with-dictation':
+    spoken: 'hi dictation'
+    enabled: true
+    description: 'transcribe via dictation'
+    action: ->
+        @key('\\', 'command')
+
+  'search-with-siri':
+    spoken: 'hi siri'
+    enabled: true
+    description: 'engage with the siri desktop application'
+    action: ->
+        @key('H', 'command option control')
 
   'add-list-entry':
     spoken: 'listy'
@@ -408,6 +421,15 @@ Package.commands
             @key "s", "command option control"
             @delay(200)
             @key "."
+
+  'show-hidden-areas':
+    spoken: 'show desktop'
+    grammarType: 'oneArgument'
+    description: 'bring up the user interface for hidden application tabs'
+    continuous: false
+    enabled: true
+    action: (direction) ->
+      @key direction, 'control'
 
   'space-before-last-utterance':
     spoken: 'tragically'
