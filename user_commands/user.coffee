@@ -10,6 +10,16 @@ Package.commands
         @string "atom ."
         @key "Return"
 
+  'open-sublime-here':
+    spoken: 'sublime here'
+    enabled: true
+    description: "open sublime here"
+    continuous: false
+    scope: 'command-line'
+    action: ->
+        @string "subl ."
+        @key "Return"
+
   'beautify-editor':
     spoken: 'beautify'
     enabled: true
@@ -71,7 +81,7 @@ Package.commands
     spoken: 'chris whip'
     enabled: true
     description: "combine chris and swipe"
-    continuous: false
+    continuous: true
     action: ->
       @do "cursor:right"
       @do "symbols:comma-space"
@@ -148,9 +158,9 @@ Package.commands
       @delay(50)
       @positionMouse(100, 100, 1) # index?
       @positionMouse(0, 0, 1) # index?
-      # in case monitor 2 is hooked up
-      @positionMouse(100, 100, 2) # index?
-      @positionMouse(0, 0, 2) # index?
+      # # in case monitor 2 is hooked up
+      # @positionMouse(100, 100, 2) # index?
+      # @positionMouse(0, 0, 2) # index?
       # turn off microphone
       @do('dragon_darwin:microphone-sleep')
 
@@ -158,9 +168,9 @@ Package.commands
       # move mouse again
       @positionMouse(100, 100, 1) # index?
       @positionMouse(0, 0, 1) # index?
-      # in case monitor 2 is hooked up
-      @positionMouse(100, 100, 2) # index?
-      @positionMouse(0, 0, 2) # index?
+      # # in case monitor 2 is hooked up
+      # @positionMouse(100, 100, 2) # index?
+      # @positionMouse(0, 0, 2) # index?
 
   'dictate-with-dictation':
     spoken: 'hi dictation'
@@ -179,6 +189,7 @@ Package.commands
   'add-list-entry':
     spoken: 'listy'
     enabled: true
+    continuous: true
     description: 'add another entry to a list with the same style of quotes that you are using'
     action: ->
         @key('right', 'shift')
@@ -431,6 +442,45 @@ Package.commands
     action: (direction) ->
       @key direction, 'control'
 
+  'segmented-screen-capture':
+    spoken: 'super screen capture'
+    enabled: true
+    continuous: false
+    description: 'crosshair selection for screen save'
+    action: ->
+        @key "4", "command shift"
+
+  'segmented-screen-copy':
+    spoken: 'super screen copy'
+    enabled: true
+    continuous: false
+    description: 'crosshair selection for screen clipboard copy'
+    action: ->
+        @key "4", "command control shift"
+
+  'close-bracket-html':
+    spoken: 'super tag'
+    enabled: true
+    continuous: true
+    tags: ['user']
+    description: 'close html tag'
+    action: ->
+        @do "common:forward-delete"
+        @string ">"
+
+  'format-comment-html':
+    spoken: 'super trundle'
+    enabled: true
+    continuous: false
+    tags: ['user']
+    description: 'add html style comment block'
+    action: ->
+        @string "/* "
+        @string " */"
+        @key "left"
+        @key "left"
+        @key "left"
+
   'space-before-last-utterance':
     spoken: 'tragically'
     enabled: true
@@ -441,3 +491,14 @@ Package.commands
         @do "cursor:left"
         @do "symbols:space"
         @do "cursor:way-right-then-space"
+
+  'format-comment-for-react':
+    enabled: true
+    spoken: 'trundle react'
+    description: 'react specific comment block'
+    continuous: false
+    action: () ->
+        @do "clipboard:cut"
+        @string '{/*  */}'
+        @left(4)
+        @do "clipboard:paste"
