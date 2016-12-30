@@ -494,7 +494,7 @@ Package.commands
 
   'format-comment-for-react':
     enabled: true
-    spoken: 'trundle react'
+    spoken: 'super trundle react'
     description: 'react specific comment block'
     continuous: false
     action: () ->

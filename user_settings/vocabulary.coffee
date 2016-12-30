@@ -56,6 +56,7 @@ Settings.vocabulary = {
     "so linear": "solinea"
     "so a linear": "solinea"
     "touché": "touch"
+    "web pack": "webpack"
     "zug": "z"
   },
   sequences: { # common sequences of commands (to boost accuracy)
