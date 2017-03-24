@@ -19,7 +19,6 @@ Settings.vocabulary = {
     "char lug tanker": "console.log("
     "coffee script": "coffeescript"
     'consul': 'console'
-    ". chuck": "."
     "dotson": ". "
     "e-mail": "email"
     "e2 e": "e2e"

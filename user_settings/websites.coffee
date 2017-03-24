@@ -2,7 +2,11 @@ Settings.web =
   websites:
     "alpha": "https://www.wolframalpha.com/"
     "amazon": "https://smile.amazon.com"
+    "bing": "https://bing.com"
     "calendar": "https://calendar.google.com"
+    "docs": "https://docs.google.com"
+    "drive": "https://drive.google.com"
+    "duck": "https://www.duckduckgo.com"
     "facebook": "https://facebook.com"
     "gmail": "https://gmail.com"
     "linkedin": "https://www.linkedin.com/"

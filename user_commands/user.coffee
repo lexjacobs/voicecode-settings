@@ -86,6 +86,14 @@ Package.commands
       @do "cursor:right"
       @do "symbols:comma-space"
 
+  "return-alternate":
+    spoken: 'chuck'
+    enabled: true
+    description: "often misunderstood and combination"
+    continuous: true
+    action: ->
+      @key "return"
+
   "clear-terminal":
     spoken: "clear"
     enabled: true
@@ -410,6 +418,16 @@ Package.commands
     continuous: false
     action: ->
       @applescript('tell application "VoiceCode" to quit')
+
+  "list-folder-contents":
+    spoken: 'super list'
+    enabled: true
+    scope: 'command-line'
+    description: "list shell folder contents with full details"
+    continuous: false
+    action: ->
+      @string "ls -lisa"
+      @key "return"
 
   "activate-shorty":
     spoken: 'shorty'
