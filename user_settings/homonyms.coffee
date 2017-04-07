@@ -26,6 +26,7 @@ user_homonyms = [
 	["grip", "grep"],
 	["hero", "heroku"],
 	["however", "hover"],
+	["jason", "JSON"]
 	["layer", "lair"],
 	["no", "null"],
 	["paul", "pull"],
