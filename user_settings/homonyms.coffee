@@ -15,6 +15,7 @@ user_homonyms = [
 	["army", "armie"],
 	["atom", "adam"],
 	["acxiom", "axios"],
+	["beautiful", "beautify"],
 	["can", "ken"],
 	["cube", "kubernetes"],
 	["chante", "chanti"],
@@ -31,6 +32,7 @@ user_homonyms = [
 	["no", "null"],
 	["paul", "pull"],
 	["progress", " ("],
+	["string", "stringify"],
 	["while", "wow"],
 	["winter", "linter"]
 	["with", "width"],
