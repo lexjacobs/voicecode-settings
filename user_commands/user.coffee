@@ -476,6 +476,24 @@ Package.commands
     action: ->
         @key "4", "command control shift"
 
+  'move-desktop':
+    spoken: 'super screen'
+    enabled: true
+    continuous: false
+    grammarType: 'oneArgument'
+    description: 'explicit keypresses for moving between desktop spaces'
+    action: (input) ->
+
+      switchDesktop = (direction) =>
+        @key(direction, 'control')
+
+      switch input
+        when 'down' then switchDesktop '7'
+        when 'left' then switchDesktop '9'
+        when 'right' then switchDesktop '0'
+        when 'up' then switchDesktop '8'
+        else return
+
   'close-bracket-html':
     spoken: 'super tag'
     enabled: true
