@@ -23,6 +23,7 @@ user_homonyms = [
 	["dharma", "dhamma"],
 	["doctor", "docker"],
 	["evil", "eval"],
+	["except", "accept"],
 	["exercise", "exercism"],
 	["grip", "grep"],
 	["hero", "heroku"],

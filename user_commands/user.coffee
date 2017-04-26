@@ -180,9 +180,18 @@ Package.commands
       # @positionMouse(100, 100, 2) # index?
       # @positionMouse(0, 0, 2) # index?
 
+  'double-click-and-capitalize':
+    spoken: 'duchamp'
+    enabled: true
+    description: 'double-click and capitalize'
+    action: ->
+      @do 'mouse:double-click'
+      @do 'format:capitalize-next-word'
+
   'dictate-with-dictation':
     spoken: 'hi dictation'
     enabled: true
+    continuous: true
     description: 'transcribe via dictation'
     action: ->
         @key('\\', 'command')
@@ -247,40 +256,36 @@ Package.commands
       @key "Return"
 
   'move-pane-left':
-    spoken: 'pain left'
+    spoken: 'move pain left'
     enabled: true
-    description: 'go to the left pane'
+    description: 'move the current pane to the left'
     scope: 'atom'
     action: ->
-      @key 'k', 'command'
-      @key 'left', 'command'
+      @key 'left', 'command control shift'
 
   'move-pane-right':
-    spoken: 'pain right'
+    spoken: 'move pain right'
     enabled: true
-    description: 'go to the right pane'
+    description: 'move the current pane to the right'
     scope: 'atom'
     action: ->
-      @key 'k', 'command'
-      @key 'right', 'command'
+      @key 'right', 'command control shift'
 
   'move-pane-down':
-    spoken: 'pain down'
+    spoken: 'move pain down'
     enabled: true
-    description: 'go to the below pane'
+    description: 'move the current pane down'
     scope: 'atom'
     action: ->
-      @key 'k', 'command'
-      @key 'down', 'command'
+      @key 'down', 'command control shift'
 
   'move-pane-up':
-    spoken: 'pain up'
+    spoken: 'move pain up'
     enabled: true
-    description: 'go to the above pane'
+    description: 'move the current pane up'
     scope: 'atom'
     action: ->
-      @key 'k', 'command'
-      @key 'up', 'command'
+      @key 'up', 'command control shift'
 
   'shorthand-function-signature':
     spoken: 'peacock'
