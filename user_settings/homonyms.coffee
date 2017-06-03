@@ -11,7 +11,7 @@ user_homonyms = [
 	["eighth", "8th"],
 	["ninth", "9th"],
 
-	["and", "end"],
+	["and", "end", "an"],
 	["army", "armie"],
 	["atom", "adam"],
 	["acxiom", "axios"],
@@ -19,6 +19,8 @@ user_homonyms = [
 	["can", "ken"],
 	["cube", "kubernetes"],
 	["chante", "chanti"],
+  ["crack", "kraken"],
+	["constance", "constants"],
 	["shanti", "chanti"],
 	["dharma", "dhamma"],
 	["doctor", "docker"],
@@ -28,15 +30,18 @@ user_homonyms = [
 	["grip", "grep"],
 	["hero", "heroku"],
 	["however", "hover"],
-	["jason", "JSON"]
+	["jane", "chain"],
+	["jason", "JSON"],
+	["just", "jest"],
 	["layer", "lair"],
 	["no", "null"],
 	["paul", "pull"],
 	["progress", " ("],
 	["string", "stringify"],
 	["while", "wow"],
-	["winter", "linter"]
+	["winter", "linter"],
 	["with", "width"],
+	["worn", "warn", "warren"]
 ]
 
 homonyms = Packages.get('homonyms').homonyms

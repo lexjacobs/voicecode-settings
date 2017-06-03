@@ -188,6 +188,16 @@ Package.commands
       @do 'mouse:double-click'
       @do 'format:capitalize-next-word'
 
+  "put-voice-code-to-bed":
+    spoken: 'super quit voice code'
+    enabled: true
+    description: "turn off the camera and quit VoiceCode"
+    tags: ["dragon"]
+    action: ->
+      @do 'user:user:camera-quit'
+      @delay 100
+      @do 'user:user:voicecode-quit'
+
   'dictate-with-dictation':
     spoken: 'hi dictation'
     enabled: true
@@ -346,6 +356,16 @@ Package.commands
     action: ->
         @string ' !== '
 
+  'enforce-homonym-previous':
+    spoken: 'super correct'
+    enabled: true
+    description: 'select the previous word and output its homonym'
+    continuous: false
+    action: ->
+        @do 'selection:previous-word'
+        @do 'homonyms:cycle'
+        @do 'cursor:right'
+
   'super-laugh':
     spoken: 'super laugh'
     enabled: true
@@ -424,6 +444,21 @@ Package.commands
     action: ->
       @applescript('tell application "VoiceCode" to quit')
 
+  "amend-uncommitted-git-contents":
+    spoken: 'super amendment'
+    enabled: true
+    description: "add all and amend last git commit"
+    continuous: false
+    action: ->
+      @string 'git add .'
+      @key "return"
+      @delay(300)
+      @string 'git commit --amend'
+      @key "return"
+      @delay(500)
+      @string ':wq'
+      @key "return"
+
   "list-folder-contents":
     spoken: 'super list'
     enabled: true
@@ -455,15 +490,6 @@ Package.commands
             @key "s", "command option control"
             @delay(200)
             @key "."
-
-  'show-hidden-areas':
-    spoken: 'show desktop'
-    grammarType: 'oneArgument'
-    description: 'bring up the user interface for hidden application tabs'
-    continuous: false
-    enabled: true
-    action: (direction) ->
-      @key direction, 'control'
 
   'segmented-screen-capture':
     spoken: 'super screen capture'

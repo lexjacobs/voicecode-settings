@@ -4,6 +4,8 @@ Settings.insert =
     "administrators": "admins"
     "allocate": "alloc"
     "alternate": "alt"
+    "array": "arr"
+    "average": "avg"
     "at all": "et. al."
     "auxiliary": "aux"
     "biology": "bio"

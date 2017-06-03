@@ -9,6 +9,7 @@ Settings.web =
     "duck": "https://www.duckduckgo.com"
     "facebook": "https://facebook.com"
     "gmail": "https://gmail.com"
+    "hero": "https://dashboard.heroku.com/apps"
     "linkedin": "https://www.linkedin.com/"
     "local": "http://localhost:8080"
     "medium": "https://medium.com/"
