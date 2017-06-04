@@ -12,5 +12,5 @@ Commands.changeSpoken("cursor:word-left", "locky") ## move the cursor by word to
 Commands.changeSpoken("cursor:word-right", "rocky") ## move the cursor by word to the right
 Commands.changeSpoken("selection:word-left", "shlocky") ## extend selection by word to the left
 Commands.changeSpoken("selection:word-right", "shrocky") ## extend selection by word to the right
-Commands.changeSpoken("symbols:brackets", "brassica") ## extend selection by word to the right
-Commands.changeSpoken("symbols:surround-parentheses", "parmesan") ## extend selection by word to the right
+# Commands.changeSpoken("symbols:brackets", "basil") ## extend selection by word to the right
+# Commands.changeSpoken("symbols:surround-parentheses", "parsley") ## extend selection by word to the right
