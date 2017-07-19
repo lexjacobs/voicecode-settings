@@ -1,4 +1,5 @@
 user_homonyms = [
+	["_", "render"],
 	["8", "ate"],
 	["first", "1st"],
 	["second", "2nd"],
@@ -35,10 +36,12 @@ user_homonyms = [
 	["just", "jest"],
 	["layer", "lair"],
 	["no", "null"],
+	["matter", "natter"],
 	["paul", "pull"],
 	["progress", " ("],
 	["string", "stringify"],
 	["while", "wow"],
+	["will", "twilio"],
 	["winter", "linter"],
 	["with", "width"],
 	["worn", "warn", "warren"]

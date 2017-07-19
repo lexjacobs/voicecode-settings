@@ -20,6 +20,18 @@ Package.commands
         @string "subl ."
         @key "Return"
 
+  'backbone-template-tag':
+    spoken: 'backbone tag'
+    enabled: true
+    description: "underscore template substitution tags"
+    continuous: true
+    scope: 'atom'
+    action: ->
+        @string "<%=  %>"
+        @do "cursor:left"
+        @do "cursor:left"
+        @do "cursor:left"
+
   'beautify-editor':
     spoken: 'beautify'
     enabled: true
@@ -130,7 +142,7 @@ Package.commands
     autoSpacing: "always never"
     enabled: true
     scope: 'command-line'
-    multiPhraseAutoSpacing: "always never"
+    multiPhraseAutoSpacing: "never never"
     description: "inserts a space then a ' -'. useful for arguments at the ' +
     'command line"
     action: ->

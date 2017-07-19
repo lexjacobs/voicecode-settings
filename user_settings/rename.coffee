@@ -1,3 +1,5 @@
+# Commands.changeSpoken("symbols:brackets", "basil") ##
+Commands.changeSpoken("symbols:surround-parentheses", "prickly") ## ()
 Commands.changeSpoken('symbols:left-brace', 'kirk ling') ## {
 Commands.changeSpoken('symbols:right-brace', 'kirk ring') ## }
 Commands.changeSpoken("symbols:left-bracket", "brax ling") ## [
@@ -12,5 +14,3 @@ Commands.changeSpoken("cursor:word-left", "locky") ## move the cursor by word to
 Commands.changeSpoken("cursor:word-right", "rocky") ## move the cursor by word to the right
 Commands.changeSpoken("selection:word-left", "shlocky") ## extend selection by word to the left
 Commands.changeSpoken("selection:word-right", "shrocky") ## extend selection by word to the right
-# Commands.changeSpoken("symbols:brackets", "basil") ## extend selection by word to the right
-# Commands.changeSpoken("symbols:surround-parentheses", "parsley") ## extend selection by word to the right
