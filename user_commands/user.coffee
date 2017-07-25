@@ -407,7 +407,7 @@ Package.commands
     description: "facilitate this. convention"
     autoSpacing: "normal"
     multiPhraseAutoSpacing: "normal"
-    continuous: false
+    continuous: true
     action: ->
         @string 'this.'
 
