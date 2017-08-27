@@ -164,6 +164,28 @@ Package.commands
     action: ->
       @string " | "
 
+  'do-not-disturb':
+    spoken: 'do not disturb'
+    enabled: true
+    description: 'turn on do not disturb and return mouse to previous position'
+    continuous: false
+    action: ->
+      # store previous mouse position
+      position = @getMousePosition()
+      {x, y} = position
+      @positionMouse(1410, 12, 1)
+      @delay(200)
+      @do 'mouse:click'
+      @delay(400)
+      @positionMouse(1400, 148, 1)
+      @do 'scrolling:way-up'
+      @delay(200)
+      @do 'mouse:click'
+      @delay(200)
+      # return to previous mouse position
+      @positionMouse(x, y, 1)
+      @do 'mouse:click'
+
   'park-mouse':
     spoken: 'drag park'
     enabled: true
