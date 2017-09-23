@@ -170,21 +170,23 @@ Package.commands
     description: 'turn on do not disturb and return mouse to previous position'
     continuous: false
     action: ->
+      @do 'user:user:camera-pause'
       # store previous mouse position
       position = @getMousePosition()
       {x, y} = position
       @positionMouse(1410, 12, 1)
       @delay(200)
       @do 'mouse:click'
-      @delay(400)
+      @delay(600)
       @positionMouse(1400, 148, 1)
       @do 'scrolling:way-up'
-      @delay(200)
+      @delay(500)
       @do 'mouse:click'
-      @delay(200)
+      @delay(500)
       # return to previous mouse position
       @positionMouse(x, y, 1)
       @do 'mouse:click'
+      @do 'user:user:camera-pause'
 
   'park-mouse':
     spoken: 'drag park'

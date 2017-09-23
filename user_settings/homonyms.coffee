@@ -40,7 +40,7 @@ user_homonyms = [
 	["matter", "natter"],
 	["paul", "pull"],
 	["progress", " ("],
-	["string", "stringify"],
+	["string", "JSON.stringify"],
 	["while", "wow"],
 	["will", "twilio"],
 	["winter", "linter"],

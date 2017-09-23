@@ -29,6 +29,16 @@ Settings.window = windowPositions:
       y: 0
       width: .75
       height: 1
+  "super left":
+      x: 0
+      y: 0
+      width: .85
+      height: 1
+  "super right":
+      x: .15
+      y: 0
+      width: .85
+      height: 1
   "quarter left":
       x: 0
       y: 0
