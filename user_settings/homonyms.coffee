@@ -35,6 +35,7 @@ user_homonyms = [
 	["jason", "JSON"],
 	["just", "jest"],
 	["layer", "lair"],
+	["loader", "lodash"],
 	["marion", "merrin", "beeb"],
 	["no", "null"],
 	["matter", "natter"],

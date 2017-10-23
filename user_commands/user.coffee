@@ -188,6 +188,22 @@ Package.commands
       @do 'mouse:click'
       @do 'user:user:camera-pause'
 
+  'double-click-copy-switch':
+    spoken: 'dookoosh quick'
+    enabled: true
+    description: 'double-click, copy, switch applications'
+    action: ->
+      @do 'mouse-combo:double-click-copy'
+      @do 'application:switch-to-previous'
+
+  'double-click-paste-switch':
+    spoken: 'doopark swick'
+    enabled: true
+    description: 'double-click, paste, switch applications'
+    action: ->
+      @do 'mouse-combo:double-click-paste'
+      @do 'application:switch-to-previous'
+
   'park-mouse':
     spoken: 'drag park'
     enabled: true
@@ -526,6 +542,17 @@ Package.commands
             @key "s", "command option control"
             @delay(200)
             @key "."
+
+  'search-dialogue-then-paste':
+    spoken: 'spark oh'
+    enabled: true
+    continuous: false
+    description: 'trigger common:find followed by clipboard:paste'
+    action: ->
+      @do 'common:find'
+      @delay(100)
+      @do 'clipboard:paste'
+      @do 'common:enter'
 
   'segmented-screen-capture':
     spoken: 'super screen capture'
