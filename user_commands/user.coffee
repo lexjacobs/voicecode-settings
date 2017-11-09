@@ -174,6 +174,7 @@ Package.commands
       # store previous mouse position
       position = @getMousePosition()
       {x, y} = position
+      # move to the top right corner and click
       @positionMouse(1410, 12, 1)
       @delay(200)
       @do 'mouse:click'
@@ -587,6 +588,20 @@ Package.commands
         when 'right' then switchDesktop '0'
         when 'up' then switchDesktop '8'
         else return
+
+  'open-side-menu':
+    spoken: 'super side menu'
+    enabled: true
+    description: 'open side menu and move mouse to middle of pane'
+    continuous: false
+    action: ->
+      @do 'user:user:camera-pause'
+      @positionMouse(1410, 12, 1)
+      @delay(200)
+      @do 'mouse:click'
+      @delay(600)
+      @positionMouse(1300, 500, 1)
+      @do 'user:user:camera-pause'
 
   'close-bracket-html':
     spoken: 'super tag'
