@@ -506,10 +506,7 @@ Package.commands
       @string 'git add .'
       @key "return"
       @delay(300)
-      @string 'git commit --amend'
-      @key "return"
-      @delay(500)
-      @string ':wq'
+      @string 'git commit --amend --no-edit'
       @key "return"
 
   "list-folder-contents":
