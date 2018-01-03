@@ -386,15 +386,23 @@ Package.commands
   'shift-return':
     spoken: 'sky return'
     enabled: true
-    description: "press shift + return"
+    description: 'press shift + return'
     continuous: false
     action: ->
         @key 'return', 'shift'
 
+  'return-alternate':
+    spoken: 'slap'
+    enabled: true
+    description: 'press return'
+    continuous: true
+    action: ->
+      @do 'common:enter'
+
   'open-dash':
     spoken: 'stacks it'
     enabled: true
-    description: "opens up dash"
+    description: 'opens up dash'
     continuous: false
     action: ->
         @key 'D', 'control option'
