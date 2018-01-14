@@ -81,5 +81,8 @@ Settings.vocabulary = {
       'repetition:command-2', # reinforcing 🔉slash soup🔉  for javascript comments
       'bin', # reinforce the phrase 🔉slash bin🔉 => `/bin`
     ]
+    'common:delete': [
+      'symbols:surround-spaces', 'cursor:down', 'common:forward-delete'
+    ]
   }
 }
