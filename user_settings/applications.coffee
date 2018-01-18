@@ -4,6 +4,7 @@ Settings.application =
     navigate: "SmartNav"
     tree: "SourceTree"
     tune: "iTunes"
+    'virtual' : 'VirtualBox'
     'vlc' : 'VLC'
     yummy: "Yummy FTP Lite"
     notes: "Notes"

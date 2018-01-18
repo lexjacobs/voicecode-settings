@@ -560,6 +560,14 @@ Package.commands
       @do 'clipboard:paste'
       @do 'common:enter'
 
+  'delete-forward-and-reverse':
+    spoken: 'slurp'
+    enabled: true
+    description: 'delete backwards then forward'
+    action: ->
+      @do 'common:delete'
+      @do 'common:forward-delete'
+
   'segmented-screen-capture':
     spoken: 'super screen capture'
     enabled: true
