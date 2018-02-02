@@ -416,6 +416,15 @@ Package.commands
     continuous: false
     action: ->
         @string ' !== '
+        
+  'capitalize-previous-word':
+    spoken: 'super big'
+    enabled: true
+    description: 'make <- that big'
+    action: ->
+      @do 'selection:previous-word'
+      @do 'text:capitalize'
+      @do 'cursor:right'
 
   'enforce-homonym-previous':
     spoken: 'super correct'
