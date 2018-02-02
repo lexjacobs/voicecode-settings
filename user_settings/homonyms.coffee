@@ -32,6 +32,7 @@ user_homonyms = [
 	["hero", "heroku"],
 	["however", "hover"],
 	["jane", "chain"],
+	["jared", "Jarett"],
 	["jason", "JSON"],
 	["just", "jest"],
 	["layer", "lair"],

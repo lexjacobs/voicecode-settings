@@ -84,5 +84,8 @@ Settings.vocabulary = {
     'common:delete': [
       'symbols:surround-spaces', 'cursor:down', 'common:forward-delete'
     ]
+    'git:git-command': [
+      'push origin master'
+    ]
   }
 }
