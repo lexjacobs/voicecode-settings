@@ -78,7 +78,8 @@ Settings.vocabulary = {
   },
   sequences: { # common sequences of commands (to boost accuracy)
     'symbols:slash': [
-      'repetition:command-2', # reinforcing 🔉slash soup🔉  for javascript comments
+      'repetition:command-1', # reinforcing 🔉slash wink🔉 for //
+      'repetition:command-2', # reinforcing 🔉slash soup🔉  for javascript //
       'bin', # reinforce the phrase 🔉slash bin🔉 => `/bin`
     ]
     'common:delete': [
@@ -86,6 +87,18 @@ Settings.vocabulary = {
     ]
     'git:git-command': [
       'push origin master'
+    ]
+    'symbols:dot': [
+      'common:enter'
+    ]
+    'common:delete': [
+      'repetition:command-1', 'repetition:command-2', 'repetition:command-3', 'repetition:command-4', 'repetition:command-5'
+    ]
+    'cursor:down': [
+      'repetition:command-1', 'repetition:command-2', 'repetition:command-3', 'repetition:command-4', 'repetition:command-5'
+    ]
+    'cursor:up': [
+      'common:enter', 'repetition:command-1', 'repetition:command-2', 'repetition:command-3', 'repetition:command-4', 'repetition:command-5'
     ]
   }
 }
