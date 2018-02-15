@@ -31,6 +31,7 @@ Settings.vocabulary = {
     'front and': 'front end'
     'gs k': 'gsk'
     'gray': 'grey'
+    'pack reactor': 'Hack Reactor'
     'i\'d': 'I\'d'
     'i\'ve': 'I\'ve'
     'i/o': 'io'
@@ -100,5 +101,6 @@ Settings.vocabulary = {
     'cursor:up': [
       'common:enter', 'repetition:command-1', 'repetition:command-2', 'repetition:command-3', 'repetition:command-4', 'repetition:command-5'
     ]
+    'yarn': ['test']
   }
 }

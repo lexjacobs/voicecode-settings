@@ -251,6 +251,16 @@ Package.commands
       @delay 100
       @do 'user:user:voicecode-quit'
 
+  'press-function-key':
+    grammarType: 'integerCapture'
+    description: 'press function key'
+    spoken: 'funky'
+    continuous: false
+    enabled: true
+    action: (number) ->
+      keycodes = ['122', '120', '99', '118', '96', '97', '98', '100', '101', '109', '103', '111', '105', '107', '113', '106', '64', '79', '80', '90']
+      @applescript "tell application \"System Events\" to key code #{keycodes[number - 1]}"
+
   'dictate-with-dictation':
     spoken: 'hi dictation'
     enabled: true
@@ -601,14 +611,16 @@ Package.commands
     description: 'explicit keypresses for moving between desktop spaces'
     action: (input) ->
 
-      switchDesktop = (direction) =>
+      alternateDesktopView = (direction) =>
         @key(direction, 'control')
+      moveDesktop = (key) =>
+        @do('user:user:press-function-key', key)
 
       switch input
-        when 'down' then switchDesktop '7'
-        when 'left' then switchDesktop '9'
-        when 'right' then switchDesktop '0'
-        when 'up' then switchDesktop '8'
+        when 'down' then alternateDesktopView '7'
+        when 'up' then alternateDesktopView '8'
+        when 'left' then moveDesktop(9)
+        when 'right' then moveDesktop(10)
         else return
 
   'open-side-menu':
